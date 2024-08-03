@@ -27,7 +27,7 @@ export class UserService {
     return { ...createUserDto, id: 1 };
   }
 
-  getUsers(): UserEntity[] {
-    return this.users;
+  getUsers(): Promise<UserEntity[]> {
+    return this.userRepository.find();
   }
 }
