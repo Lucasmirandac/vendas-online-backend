@@ -24,7 +24,7 @@ export class UserService {
 
     this.userRepository.save(user);
 
-    return { ...createUserDto, id: 1 };
+    return user;
   }
 
   getUsers(): Promise<UserEntity[]> {
